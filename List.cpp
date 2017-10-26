@@ -93,3 +93,16 @@ void List::remove(int k)
 	
 	//Implementations of missing operations
 	
+void List::display()//For debugging purposes only
+{
+   for(Node* curPtr = frontPtr; curPtr != nullptr; curPtr = curPtr->link)
+   cout<<curPtr->data<<" ";	
+}
+
+void List::clear()
+{
+	while(num_elements > 0)
+	{
+		remove(1);
+	}	
+}
